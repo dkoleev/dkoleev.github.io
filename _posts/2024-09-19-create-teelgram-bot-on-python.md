@@ -2,9 +2,7 @@
 title: "Create a Telegram Bot on Python"
 date: 2024-09-19
 ---
-# How to Create a Telegram Bot with Python: A Step-by-Step Guide
 
-Telegram bots are an excellent way to automate tasks, provide information, or engage with users in creative ways. Telegram offers a robust API and allows developers to create bots that can send and receive messages, interact with users, and connect to external services. If you're looking to build your own Telegram bot using Python, you're in the right place! This guide will walk you through the process step by step.
 
 ### Table of Contents:
 1. [What Is a Telegram Bot?](#1-what-is-a-telegram-bot)
@@ -19,14 +17,11 @@ Telegram bots are an excellent way to automate tasks, provide information, or en
 
 ## 1. What Is a Telegram Bot?
 
-A **Telegram bot** is an automated account that can perform a variety of tasks. It can respond to messages, execute commands, or even send notifications based on specific triggers. Bots are frequently used to:
+Bots are small applications that run entirely within the Telegram app. Users interact with bots through flexible interfaces that can support any kind of task or service. 
 
-- Provide automated customer support
-- Notify users about updates
-- Manage group chats
-- Integrate third-party services (e.g., weather, financial data, or APIs)
-
-Bots interact with Telegram users via messages and commands, and they can be programmed to respond in various ways.
+You can read more about bots in official documentation:
+[Bots](https://core.telegram.org/bots)
+[Telegram Bot API](https://core.telegram.org/bots/api)
 
 ---
 
@@ -35,9 +30,11 @@ Bots interact with Telegram users via messages and commands, and they can be pro
 Before diving into bot creation, you'll need the following:
 
 - **A Telegram Account**: You can easily create one by downloading the Telegram app on your phone.
-- **Python Installed**: We will use Python 3, so make sure it’s installed on your system.
-- **Basic Python Knowledge**: Understanding Python syntax and packages will help you navigate the code.
+- **Python Installed**: We will use Python 3, so make sure it’s installed on your computer. _[download link](https://www.python.org/downloads/)_
+- **Basic Python Knowledge**: Understanding Python syntax and packages will help you navigate the code. I can recommend this book [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 - **BotFather Access**: BotFather is a built-in Telegram bot that helps you manage and create new bots.
+- **VS Code(Optional)**: I use it for writing my bots. But feel free to choose any other editor. But I'd recommended to use this one.
+_[Here](https://code.visualstudio.com/download) you can download the latest version of VS Code, and [here](https://code.visualstudio.com/docs/python/python-tutorial) is instruction on how to set it for Python._
 
 ---
 
@@ -46,11 +43,11 @@ Before diving into bot creation, you'll need the following:
 To create your own bot, you need to use **BotFather**, the official tool for registering and managing bots on Telegram.
 
 ### Steps:
-1. Open Telegram and search for the **BotFather** bot.
+1. Open Telegram and search for the **BotFather** bot. (Enter @BotFather into the search menu)
 2. Start a chat with BotFather by typing `/start`.
 3. Create a new bot by typing `/newbot`.
-4. You will be prompted to provide a name for your bot. Enter a unique name (e.g., `MyWeatherBot`).
-5. BotFather will ask for a username for the bot. The username must end with "bot" (e.g., `my_weather_bot`).
+4. You will be prompted to provide a name for your bot. Enter a unique name (e.g., `Hello World`).
+5. BotFather will ask for a username for the bot. The username must end with "bot" (e.g., `HelloWorldBot`).
 6. After completing these steps, BotFather will give you a **token**. This token is crucial as it authenticates your bot and allows you to interact with Telegram’s API.
 
 > **Important:** Keep your token private and do not share it publicly!
@@ -104,7 +101,7 @@ def main():
     application.add_handler(CommandHandler("help", help_command))
 
     # Start the bot and run it until manually stopped
-    application.run_polling()
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
     main()
@@ -147,8 +144,9 @@ Congratulations! You’ve successfully created a basic Telegram bot using Python
 * Write Python code to handle commands.
 * Run the bot locally and interact with it on Telegram.
 
-This basic bot can be expanded in countless ways. You can integrate it with APIs, connect it to databases, or add more sophisticated command handling. Telegram bots provide immense flexibility, and by leveraging Python, you can quickly build powerful bots that automate tasks or engage with users in creative ways.
-
 ---
 
-Feel free to explore the Telegram Bot API further and enhance your bot to include more advanced features!
+Next, I'd recommend you to learn the [example bots](https://docs.python-telegram-bot.org/en/stable/examples.html) from `python-telegram-bot` 
+
+---
+This is a series of articles. In next articles, I'll explain how to host you bot on **PythonAnywhere**, how to host bots on your own **Raspberry PI** server, and how to create more complicated bots.
