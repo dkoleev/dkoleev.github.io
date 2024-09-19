@@ -9,6 +9,19 @@ Hi, I'm Dmitry Koleev, a [brief description about yourself]. I write about [topi
 
 ---
 
+<p style="color:green;">
+  This is my hacker-style themed page, powered by Jekyll and GitHub Pages.
+</p>
+
+```sh
+# Displaying some hacker-style content:
+- Custom Raspberry Pi projects
+- Penetration testing and ethical hacking
+- Open-source software enthusiast
+```
+
+---
+
 ## Recent Articles
 
 <ul>
