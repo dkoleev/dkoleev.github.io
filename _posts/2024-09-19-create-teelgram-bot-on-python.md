@@ -1,3 +1,9 @@
+---
+title: "My First Post"
+date: 2024-09-19
+---
+# Welcome to My First Post
+
 ## Table Of Contents:
 * [What is a Telegram Bot](#chapter-1)
 * [Prerequisties](#chapter-2)
