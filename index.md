@@ -17,6 +17,17 @@ Hi, I'm Dmitry Koleev 👋
 - Custom Raspberry Pi projects
 ```
 
+```sh
+# My own projects:
+- [Mobile survival game set in an open 3D world with more than 1 million downloads.](https://play.google.com/store/apps/details?id=com.airbit.outcast)
+- [Plugin for flexible use of Google Sheets as game configs.](https://github.com/dkoleev/UniGSC)
+```
+
+```sh
+# Team projects:
+- [Florescence](https://play.google.com/store/apps/details?id=com.gamegarden.florescence&hl=en)
+```
+
 ---
 
 
