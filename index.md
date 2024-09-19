@@ -13,8 +13,6 @@ Hi, I'm Dmitry Koleev, a [brief description about yourself]. I write about [topi
 
 Here are my recent articles:
 
-Here are my recent articles:
-
 <ul>
   {% for post in site.posts %}
     <li>
