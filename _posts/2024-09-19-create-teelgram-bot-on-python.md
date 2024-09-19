@@ -2,8 +2,7 @@
 title: "Create a Telegram Bot on Python"
 date: 2024-09-19
 ---
-
-
+#How to create a Telegram Bot on Python: Step-by-Step guide.
 ### Table of Contents:
 1. [What Is a Telegram Bot?](#1-what-is-a-telegram-bot)
 2. [Prerequisites](#2-prerequisites)
