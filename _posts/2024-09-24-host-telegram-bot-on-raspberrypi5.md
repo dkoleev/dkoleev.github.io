@@ -105,6 +105,7 @@ python3 bot.py
 ```bash
 chmod +x start_bot.sh
 ```
+
 ### Run Bot via `tmux`:
 1. Start a new `tmux` session:
 ```bash
@@ -120,6 +121,7 @@ To reattach to your bot’s `tmux` session later, use:
 ```bash
 tmux attach -t my_bot_session
 ```
+
 ## Automatically Start the Bot on Boot (Optional)
 If you want your bot to start automatically on boot, you can use a systemd service. Here’s how:
 1. Create a new service file:
@@ -127,7 +129,7 @@ If you want your bot to start automatically on boot, you can use a systemd servi
 sudo nano /etc/systemd/system/my_bot.service
 ```
 2. Add the following configuration, modifying paths as needed:
-```ini
+```
 [Unit]
 Description=My Bot Service
 
