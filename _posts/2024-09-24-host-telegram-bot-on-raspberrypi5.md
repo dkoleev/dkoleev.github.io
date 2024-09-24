@@ -13,12 +13,12 @@ date: 2024-09-24
 * [Keep the bot running in the background using `tmux`](#keep-the-bot-running-in-the-background-using-tmux)
 * [Automatically Start the Bot on Boot (Optional)](#automatically-start-the-bot-on-boot-optional)
 
-# Intruduction
+## Intruduction
 In my previous article, I demonstrated how to create and run a Telegram Bot using Python. You can find it [here](https://dev.to/dmitry-koleev/create-a-telegram-bot-on-python-44l4)
 
 In this guide, I’ll walk you through hosting your Telegram bot on your own Raspberry Pi server.
 
-# Install OS on Raspberry Pi 5
+## Install OS on Raspberry Pi 5
 Follow [this guide](https://www.raspberrypi.com/documentation/computers/getting-started.html#raspberry-pi-imager) to create an image with Raspberry Pi Imager.   
 I recommend choosing `Raspberry Pi OS Lite` OS because it is the best option in terms of lightweight simplicity. 
 
@@ -26,7 +26,7 @@ In the imager settings check the box next to **Enable SSH** and select **use pas
 
 After creating the image on a USB flash drive, insert the flash card into your Raspberry Pi and power it on.
 
-# Connect to Raspberry Pi via `SSH`
+## Connect to Raspberry Pi via `SSH`
 1. Open the console (cmd or PowerShell on Windows)
 2. Ping your Raspberry Pi the following command:
 ```bash
@@ -37,10 +37,10 @@ You’ll receive ping statistics along with the IP address of your Raspberry Pi.
 ```bash
 SSH pi@<your_raspberry_pi_ip> (for example: SSH pi@192.168.0.10)
 ```
-4. Enter the password (default is raspberry). I strongly recommend changing this later.
+4. Enter the password (default is `raspberry`). I strongly recommend changing this later.
 5. If the password is correct, you will be connected to your Raspberry Pi via `SSH`.
 
-# Prepare Envariement
+## Prepare Envariement
 1. Update your Raspberry Pi
 ```bash
 sudo apt update
@@ -67,7 +67,7 @@ source telegram-bot-env/bin/activate
 pip install python-telegram-bot --upgrade
 ```
 
-# Create and Run the Bot
+## Create and Run the Bot
 1. Create a new `Python` file using the `nano` text editor
 ```bash
 nano bot.py
@@ -83,8 +83,8 @@ However, this method will terminate the bot when you close the terminal.
 
 To keep it running in the background we can use [`tmux`](https://github.com/tmux/tmux/wiki)
 
-# Keep the Bot Running in the Background Using `tmux`
-## Create an Executable Shell Script to Start Your Bot
+## Keep the Bot Running in the Background Using `tmux`
+### Create an Executable Shell Script to Start Your Bot
 1. Install `tmux`
 ```bash
 sudo apt update
@@ -105,7 +105,7 @@ python3 bot.py
 ```bash
 chmod +x start_bot.sh
 ```
-## Run Bot via `tmux`:
+### Run Bot via `tmux`:
 1. Start a new `tmux` session:
 ```bash
 tmux new -s my_bot_session
@@ -120,7 +120,7 @@ To reattach to your bot’s `tmux` session later, use:
 ```bash
 tmux attach -t my_bot_session
 ```
-# Automatically Start the Bot on Boot (Optional)
+## Automatically Start the Bot on Boot (Optional)
 If you want your bot to start automatically on boot, you can use a systemd service. Here’s how:
 1. Create a new service file:
 ```bash
