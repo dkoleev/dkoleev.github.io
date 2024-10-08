@@ -5,7 +5,7 @@ date: 2024-10-08
 
 I highly recommend that every programmer reads [this](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) document at least once in their life.
 
-# Bride overview
+# Brief overview
 In his seminal work, Ulrich Drepper provides a deep dive into the intricacies of modern memory subsystems and offers practical advice for developers aiming to optimize software performance. As CPU cores become faster and more numerous, memory access has emerged as a key bottleneck for many applications. Drepper's paper breaks down how programmers can utilize hardware advancements like CPU caches and RAM to improve efficiency.
 
 ## 1. Memory Bottlenecks in Modern Systems
